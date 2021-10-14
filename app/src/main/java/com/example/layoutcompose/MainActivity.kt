@@ -9,6 +9,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.layoutcompose.ui.theme.LayoutComposeTheme
+import com.example.layoutcompose.ui.theme.custom.PhotoCard
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +18,7 @@ class MainActivity : ComponentActivity() {
             LayoutComposeTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
+                  PhotoCard()
                 }
             }
         }
@@ -29,10 +30,12 @@ fun Greeting(name: String) {
     Text(text = "Hello $name!")
 }
 
+
+
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     LayoutComposeTheme {
-        Greeting("Android")
+        PhotoCard()
     }
 }
